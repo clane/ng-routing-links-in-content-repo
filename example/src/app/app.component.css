@@ -1,0 +1,10 @@
+
+header { background-color:beige; padding:20px; } 
+nav a[routerLink] { display:inline-block; margin-right:20px;  } 
+
+a { font-size:1rem; }  
+
+*:focus {
+    box-shadow: 0 0 0 1px white, 0 0 0 3px black, 0 0 0 4px white;
+    z-index: 1;
+}
