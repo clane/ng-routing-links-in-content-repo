@@ -7,11 +7,5 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class Component2Component implements OnInit {
 
-  constructor() { }
-  @ViewChild('componentHeading') elementToFocusOnInit;
-
-  ngOnInit() {
-    this.elementToFocusOnInit.nativeElement.focus();
-  }
 
 }

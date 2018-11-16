@@ -14,10 +14,4 @@ export class HomeComponent implements OnInit {
        this.routingSignalService.onRoute.emit();
     }
 
-	//@ViewChild('componentHeading') elementToFocusOnInit;
-
-  ngOnInit() {
-	  //this.elementToFocusOnInit.nativeElement.focus();
-  }
-
 }

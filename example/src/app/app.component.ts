@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { RoutingSignalService } from './routing-signal.service';
 
 @Component({
@@ -10,7 +10,9 @@ import { RoutingSignalService } from './routing-signal.service';
 export class AppComponent implements OnInit {
   title = 'app';
 
-	constructor(private routingSignalService: RoutingSignalService) { }
+  constructor(private routingSignalService: RoutingSignalService) { }
+
+  @ViewChild('top') elementToFocusAfterRouting;
 
 	 ngOnInit() {
      this.routingSignalService.onRoute.subscribe( () => {
@@ -19,7 +21,7 @@ export class AppComponent implements OnInit {
    }
 
 	 onRoute() {
-	    alert('onRoute'); 
+	   this.elementToFocusAfterRouting.nativeElement.focus(); 
    }
 
 }

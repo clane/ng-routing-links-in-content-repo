@@ -1,10 +1,12 @@
 
+<div #top id="top" tabindex="-1">Top of page</div>
+
 
   <header>
     <nav>
-        <a routerLink="/home">Home</a>
-        <a routerLink="/component1">Component 1</a>
-        <a routerLink="/component2">Component 2</a>
+        <a (click)="onRoute()" routerLink="/home">Home</a>
+        <a (click)="onRoute()" routerLink="/component1">Component 1</a>
+        <a (click)="onRoute()" routerLink="/component2">Component 2</a>
     </nav>
   </header>
 
