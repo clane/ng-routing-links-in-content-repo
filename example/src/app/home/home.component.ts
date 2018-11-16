@@ -10,8 +10,8 @@ export class HomeComponent {
 
   constructor(private routingSignalService: RoutingSignalService) {}
 
-	routerLinkActivated() {
-       this.routingSignalService.onRoute.emit();
-    }
+	routerLinkActivated(e:<event>){
+	  this.routingSignalService.onRoute.emit(e: <event>);
+  }
 
 }
