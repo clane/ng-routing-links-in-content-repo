@@ -21,7 +21,9 @@ export class AppComponent implements OnInit {
    }
 
 	 onRoute(e) {
-	   this.elementToFocusAfterRouting.nativeElement.textContent = e.target.innerText; 
+	   if(e){
+		   this.elementToFocusAfterRouting.nativeElement.textContent = e.target.innerText; 
+		 } 
 	   this.elementToFocusAfterRouting.nativeElement.focus(); 
    }
 
