@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { RoutingSignalService } from '../routing-signal.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,16 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-  @ViewChild('componentHeading') elementToFocusOnInit;
+  constructor(private routingSignalService: RoutingSignalService) {}
+
+	routerLinkActivated() {
+       this.routingSignalService.onRoute.emit();
+    }
+
+	//@ViewChild('componentHeading') elementToFocusOnInit;
 
   ngOnInit() {
-    this.elementToFocusOnInit.nativeElement.focus();
+	  //this.elementToFocusOnInit.nativeElement.focus();
   }
 
 }
