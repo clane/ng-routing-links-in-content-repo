@@ -15,8 +15,8 @@ export class AppComponent implements OnInit {
   @ViewChild('top') elementToFocusAfterRouting;
 
 	 ngOnInit() {
-     this.routingSignalService.onRoute.subscribe( () => {
-		    this.onRoute();
+     this.routingSignalService.onRoute.subscribe( (e) => {
+		    this.onRoute(e);
 	 	 }) 
    }
 
