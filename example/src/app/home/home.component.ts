@@ -8,9 +8,11 @@ import { RoutingSignalService } from '../routing-signal.service';
 })
 export class HomeComponent {
 
-  constructor(private routingSignalService: RoutingSignalService) {}
+constructor(
+	private routingSignalService: RoutingSignalService
+) { }
 
-	routerLinkActivated(e:<event>){
+	routerLinkActivated(e) {
 	  this.routingSignalService.onRoute.emit(e);
   }
 
