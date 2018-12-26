@@ -13,19 +13,20 @@ export class HeaderComponent implements OnInit {
 
   @ViewChild('top') elementToFocusAfterRouting;
 
-         ngOnInit() {
+  ngOnInit() {
      this.routingSignalService.onRoute.subscribe( (e) => {
-                    this.onRoute(e);
-                 })
+        this.onRoute(e);
+     })
    }
 
-         onRoute(e) {
-           console.log(e);
-                 //console.log(e.target);
-           if(e){
-                   this.elementToFocusAfterRouting.nativeElement.textContent = e.target.innerText;
-                 }
-           this.elementToFocusAfterRouting.nativeElement.focus();
+   onRoute(e) {
+        console.log(e);
+        //console.log(e.target);
+        if(e){
+           this.elementToFocusAfterRouting.nativeElement.textContent = "Top of " + e.target.innerText;
+        }
+			 setTimeout( ()=>{this.elementToFocusAfterRouting.nativeElement.focus();}, 1000); 
+       
    }
 
 
