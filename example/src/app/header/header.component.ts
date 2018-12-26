@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
 	constructor(private routingSignalService: RoutingSignalService) { }
 
-  @ViewChild('top') elementToFocusAfterRouting;
+	@ViewChild('top') elementToFocusAfterRouting;
 
   ngOnInit() {
      this.routingSignalService.onRoute.subscribe( (e) => {
@@ -20,13 +20,11 @@ export class HeaderComponent implements OnInit {
    }
 
    onRoute(e) {
-        console.log(e);
-        //console.log(e.target);
         if(e){
            this.elementToFocusAfterRouting.nativeElement.textContent = "Top of " + e.target.innerText;
+           this.elementToFocusAfterRouting.nativeElement.blur();
+           this.elementToFocusAfterRouting.nativeElement.focus();
         }
-			 setTimeout( ()=>{this.elementToFocusAfterRouting.nativeElement.focus();}, 1000); 
-       
    }
 
 
