@@ -9,6 +9,7 @@ import { Component2Component } from './component2/component2.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { RoutingSignalService } from './routing-signal.service';
+import { HeaderComponent } from './header/header.component';
 
 const appRoutes: Routes = [
 
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     AppComponent,
     Component1Component,
     Component2Component,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
