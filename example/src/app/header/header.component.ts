@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
         if(e){
            this.elementToFocusAfterRouting.nativeElement.textContent = "Top of " + e.target.innerText;
            this.elementToFocusAfterRouting.nativeElement.blur();
-           this.elementToFocusAfterRouting.nativeElement.focus();
+					 setTimeout(()=>{this.elementToFocusAfterRouting.nativeElement.focus();}, 500); 
         }
    }
 
